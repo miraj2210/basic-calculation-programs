@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <h3>Simple Calculator</h3>
+    <div id="root"></div>
+
+    <script>
+        let a = Number(prompt("Enter first number:"));
+        let b = Number(prompt("Enter second number:"));
+        let operator = prompt("Enter operator (+, -, *, /):");
+
+        let result;
+
+        switch (operator) {
+            case "+":
+                result = a + b;
+                break;
+
+            case "-":
+                result = a - b;
+                break;
+
+            case "*":
+                result = a * b;
+                break;
+
+            case "/":
+                if (b !== 0) {
+                    result = a / b;
+                } else {
+                    result = "Cannot divide by zero";
+                }
+                break;
+
+            default:
+                result = "Invalid operator";
+        }
+
+        document.getElementById("root").innerHTML =
+            "First Number: " + a + "<br>" +
+            "Second Number: " + b + "<br>" +
+            "Operator: " + operator + "<br>" +
+            "Result: " + result;
+    </script>
+
+</body>
+
+</html>

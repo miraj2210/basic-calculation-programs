@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest  of Two Numbers</title>
+</head>
+
+<body>
+
+    <h3>Largest  of Two Numbers</h3>
+    <div id="root"></div>
+
+    <script>
+        let a = Number(prompt("Enter first number:"));
+        let b = Number(prompt("Enter second number:"));
+
+        if (a > b) {
+            document.getElementById("root").innerHTML =
+                a + " is the largest number";
+        } else if (b > a) {
+            document.getElementById("root").innerHTML =
+                b + " is the largest number";
+        } else {
+            document.getElementById("root").innerHTML =
+                "Both numbers are equal";
+        }
+    </script>
+
+</body>
+
+</html>
